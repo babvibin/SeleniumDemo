@@ -1,5 +1,7 @@
 package tests;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -8,6 +10,8 @@ import base.DriverInitializer;
 import pages.FormSubmit;
 import pages.HomePage;
 import pages.InputForm;
+import util.ReportUtil;
+import util.ScreenshotUtil;
 
 public class FormSubmitTest extends DriverInitializer{
 	WebDriver driver;
@@ -16,9 +20,12 @@ public class FormSubmitTest extends DriverInitializer{
 	FormSubmit formSubmit;
 	String expectedMessage= "Form has been submitted successfully!";
 	String expectedCheckBoxValidationMessage="You must agree before submitting.";
+	ScreenshotUtil screenshotUtil;
+	ReportUtil reportUtil;
+	
 	
 	@Test(priority = 1)
-	public void verifyFormSubmitSuccessfully()
+	public void verifyFormSubmitSuccessfully() throws IOException
 	{
 		driver=getDriver();
 		homePage=new HomePage(driver);
@@ -36,11 +43,19 @@ public class FormSubmitTest extends DriverInitializer{
 		formSubmit.clickSubmitFormButton();
 		String actualMessage= formSubmit.displaySubmittedSuccessfullyMessage();
 		Assert.assertEquals(actualMessage, expectedMessage);
-		System.out.println("FormSubmit page verification is completed");		
+		System.out.println("FormSubmit page verification is completed");	
+		
+		screenshotUtil= new ScreenshotUtil(driver, "verifyFormSubmitSuccessfully");
+
+		reportUtil=new ReportUtil();
+		reportUtil.generateReports();
+		reportUtil.generateReports1();
+		reportUtil.createTest1("Testing: verifyFormSubmitSuccessfully");
+		reportUtil.extenTestLogINFO();
 	}
 	
-	@Test(priority = 2)
-	public void verifyFormSubmit_CheckBoxValidationMessageDisplay()
+	@Test(priority = 2, retryAnalyzer = util.RetryAnalyzer.class )
+	public void verifyFormSubmit_CheckBoxValidationMessageDisplay() throws IOException
 	{
 		inputForm.clickFormSubmit();
 		formSubmit=new FormSubmit(driver);
@@ -53,6 +68,12 @@ public class FormSubmitTest extends DriverInitializer{
 		formSubmit.clickSubmitFormButton();
 		String actualCheckBoxValidationMessage= formSubmit.displaycheckboxValidationMessage();
 		Assert.assertEquals(actualCheckBoxValidationMessage, expectedCheckBoxValidationMessage);
-		System.out.println("CheckBoxValidationMessage is displayed Successfully");		
+		System.out.println("CheckBoxValidationMessage is displayed Successfully");	
+		
+		screenshotUtil= new ScreenshotUtil(driver, "verifyFormSubmit_CheckBoxValidationMessageDisplay");
+		reportUtil.createTest1("Testing: verifyFormSubmitSuccessfully");
+		reportUtil.extenTestLogINFO();
+		reportUtil.extenTestlogPASS();
+		reportUtil.extenReportFLUSH();
 	}
 }

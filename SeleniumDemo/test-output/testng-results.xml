@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-08T22:22:35 IST" name="Default suite" finished-at="2024-05-08T22:22:57 IST" duration-ms="22144">
+  <suite started-at="2024-05-15T22:12:59 IST" name="Default suite" finished-at="2024-05-15T22:13:18 IST" duration-ms="19223">
     <groups>
     </groups>
-    <test started-at="2024-05-08T22:22:35 IST" name="Default test" finished-at="2024-05-08T22:22:57 IST" duration-ms="22144">
-      <class name="tests.WindowPopupTest">
-        <test-method is-config="true" signature="browserSelection(java.lang.String)[pri:0, instance:tests.WindowPopupTest@33d512c1]" started-at="2024-05-08T22:22:35 IST" name="browserSelection" finished-at="2024-05-08T22:22:37 IST" duration-ms="2502" status="PASS">
+    <test started-at="2024-05-15T22:12:59 IST" name="Default test" finished-at="2024-05-15T22:13:18 IST" duration-ms="19223">
+      <class name="tests.JQueryUiProgressTest">
+        <test-method is-config="true" signature="browserSelection(java.lang.String)[pri:0, instance:tests.JQueryUiProgressTest@41d477ed]" started-at="2024-05-15T22:12:59 IST" name="browserSelection" finished-at="2024-05-15T22:13:02 IST" duration-ms="2802" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,11 +18,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserSelection -->
-        <test-method signature="verifyClicklikeUsOnFacebook()[pri:1, instance:tests.WindowPopupTest@33d512c1]" started-at="2024-05-08T22:22:37 IST" name="verifyClicklikeUsOnFacebook" finished-at="2024-05-08T22:22:57 IST" duration-ms="19542" status="PASS">
+        <test-method signature="verifyJQueryUiProgressCloseButton()[pri:1, instance:tests.JQueryUiProgressTest@41d477ed]" started-at="2024-05-15T22:13:02 IST" name="verifyJQueryUiProgressCloseButton" finished-at="2024-05-15T22:13:17 IST" duration-ms="15011" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyClicklikeUsOnFacebook -->
-      </class> <!-- tests.WindowPopupTest -->
+        </test-method> <!-- verifyJQueryUiProgressCloseButton -->
+        <test-method is-config="true" signature="browserclose()[pri:0, instance:tests.JQueryUiProgressTest@41d477ed]" started-at="2024-05-15T22:13:17 IST" name="browserclose" finished-at="2024-05-15T22:13:18 IST" duration-ms="1338" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserclose -->
+      </class> <!-- tests.JQueryUiProgressTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

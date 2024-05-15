@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
@@ -33,6 +34,7 @@ public class DriverInitializer {
 	switch(browserName)
 	{
 	case "chrome":
+	//	WebDriverManager.chromedriver().setup();		
 	//	System.setProperty("webdriver.chrome.driver", "C:\\Selenium_Drivers\\chromedriver.exe");
 		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/src/main/resources/chromedriver.exe");
 		driver=new ChromeDriver();
@@ -51,10 +53,10 @@ public class DriverInitializer {
 	}	
 	}	
 /*
-@AfterTest
+@AfterClass
 	public void browserclose()
 	{
 		driver.quit();
 	}
-	*/
+*/	
 }

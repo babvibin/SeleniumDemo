@@ -53,3 +53,10 @@ public class DragAndDropPage {
 		actions.dragAndDrop(sorceElement4, targetElement).perform();
 	}	
 }
+
+
+
+
+
+
+

@@ -11,6 +11,8 @@ import pages.HomePage;
 import pages.Table;
 import pages.TableWithPagination;
 import util.ExcelUtil;
+import util.ReportUtil;
+import util.ScreenshotUtil;
 
 public class TableTest extends DriverInitializer{
 	WebDriver driver;
@@ -23,6 +25,8 @@ public class TableTest extends DriverInitializer{
 	String sheetName="Sheet1";
 	int rowNumber;
 	
+	ScreenshotUtil screenshotUtil;
+	ReportUtil reportUtil;	
 	
 	@Test(priority = 1)
 	public void getValuesFromExcel() throws IOException
@@ -88,10 +92,20 @@ public class TableTest extends DriverInitializer{
 	}
 	
 	@Test(priority = 7)
-	public void verifySalary()
+	public void verifySalary() throws IOException
 	{
 		String currentSalary=tableWithPagination.getCurrentSalary(salary, rowNumber);
 		Assert.assertEquals(currentSalary, salary);
 		System.out.println(currentSalary+ " :CurrentSalary is correct");
+		
+		screenshotUtil= new ScreenshotUtil(driver, "Table-Excel Test");
+
+		reportUtil=new ReportUtil();
+		reportUtil.generateReports();
+		reportUtil.generateReports1();
+		reportUtil.createTest1("Testing: Table-Excel Test");
+		reportUtil.extenTestLogINFO();
+		reportUtil.extenTestlogPASS();
+		reportUtil.extenReportFLUSH();
 	}
 }
