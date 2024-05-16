@@ -9,14 +9,14 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelUtil {
-	static FileInputStream f;
-	static XSSFWorkbook w;
-	static XSSFSheet sh;	
-	static String fileLocation=System.getProperty("user.dir") + "/src/test/resources";
+	FileInputStream f;
+	XSSFWorkbook w;
+	XSSFSheet sh;	
+	String fileLocation=System.getProperty("user.dir") + "/src/test/resources";
+	String fileName, sheetName;
 	
 	
-	
-	public static String getStringData(int x,int y, String fileName, String sheetName) throws IOException
+	public String getStringData(int x,int y) throws IOException
 	{	
 		f=new FileInputStream(fileLocation+"/"+fileName);
 		w=new XSSFWorkbook(f);
@@ -26,7 +26,12 @@ public class ExcelUtil {
 		return c.getStringCellValue();
 	}
 
-	public static String getIntegerData(int x,int y, String fileName, String sheetName) throws IOException
+	public ExcelUtil(String fileName, String sheetName) {
+		this.fileName = fileName;
+		this.sheetName = sheetName;
+	}
+
+	public String getIntegerData(int x,int y) throws IOException
 	{	
 		f=new FileInputStream(fileLocation+"/"+fileName);
 		w=new XSSFWorkbook(f);

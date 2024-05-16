@@ -52,11 +52,11 @@ public class DriverInitializer {
 			driver=new ChromeDriver();
 	}	
 	}	
-/*
+
 @AfterClass
 	public void browserclose()
 	{
 		driver.quit();
 	}
-*/	
+	
 }

@@ -31,19 +31,13 @@ public class TableTest extends DriverInitializer{
 	@Test(priority = 1)
 	public void getValuesFromExcel() throws IOException
 	{		
-		name= excelUtil.getStringData(1, 0, fileName, sheetName);	
-		position= excelUtil.getStringData(1, 1, fileName, sheetName);
-		office= excelUtil.getStringData(1, 2, fileName, sheetName);
-		age=excelUtil.getIntegerData(1, 3, fileName, sheetName);
-		startDay= excelUtil.getStringData(1, 4, fileName, sheetName);
-		salary= excelUtil.getStringData(1, 5, fileName, sheetName);
-		System.out.println("Values read from Excel");
-		System.out.println(name);
-		System.out.println(position);
-		System.out.println(office);
-		System.out.println(age);
-		System.out.println(startDay);
-		System.out.println(salary);
+		excelUtil= new ExcelUtil(fileName, sheetName);
+		name= excelUtil.getStringData(1, 0);	
+		position= excelUtil.getStringData(1, 1);
+		office= excelUtil.getStringData(1, 2);
+		age=excelUtil.getIntegerData(1, 3);
+		startDay= excelUtil.getStringData(1, 4);
+		salary= excelUtil.getStringData(1, 5);
 	}	
 	
 	@Test(priority = 2)
@@ -56,7 +50,6 @@ public class TableTest extends DriverInitializer{
 		table.clickTableWithPagination();
 		tableWithPagination=new TableWithPagination(driver);
 		rowNumber=tableWithPagination.getRowNumber(name);	
-		System.out.println(rowNumber+ " :Row Number");
 	}	
 	
 	@Test(priority = 3)
@@ -64,23 +57,20 @@ public class TableTest extends DriverInitializer{
 	{
 		String currentPosition=tableWithPagination.getCurrentPosition(position, rowNumber);
 		Assert.assertEquals(currentPosition, position);
-		System.out.println(currentPosition+ " :CurrentPosition is correct");
 	}
 	
 	@Test(priority = 4)
 	public void verifyOffice()
 	{
 		String currentOffice=tableWithPagination.getCurrentOffice(office, rowNumber);
-		Assert.assertEquals(currentOffice, office);
-		System.out.println(currentOffice+ " :CurrentOffice is correct");		
+		Assert.assertEquals(currentOffice, office);		
 	}
 	
 	@Test(priority = 5)
 	public void verifyAge()
 	{
 		String currentAge=tableWithPagination.getCurrentAge(age, rowNumber);
-		Assert.assertEquals(currentAge, age);
-		System.out.println(currentAge+ " :CurrentAge is correct");			
+		Assert.assertEquals(currentAge, age);		
 	}
 	
 	@Test(priority = 6)
