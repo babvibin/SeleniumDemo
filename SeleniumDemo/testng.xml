@@ -19,7 +19,7 @@
 		<classes> 
 <!--	
 	
-	<class name="tests.DragAndDropTest"></class>
+
 
 			
 -->	
@@ -32,7 +32,7 @@
 	<class name="tests.FormSubmitTest"></class>			
 	<class name="tests.RadioButtonTest"></class>		
 	<class name="tests.JQueryUiProgressTest"></class>
-
+	<class name="tests.DragAndDropTest"></class>
 	
 			
 <!-- 				<methods>
