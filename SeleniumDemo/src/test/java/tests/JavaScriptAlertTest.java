@@ -22,8 +22,7 @@ public class JavaScriptAlertTest extends DriverInitializer {
 	AlertsAndModals alertsAndModals;
 	JavaScriptAlert javaScriptAlert;
 	ScreenshotUtil screenshotUtil;
-	ReportUtil reportUtil;
-	
+	ReportUtil reportUtil;	
 	
 	static String expectedValue_JavaScriptAlertBox="I am a Javascript alert box!";
 	static String expectedValue_JavaScriptPromptBox="Please enter your name";

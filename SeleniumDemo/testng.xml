@@ -1,5 +1,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"> 
-<suite name="MyDemoSuite" > 
+<suite name="MyDemoSuite" >
+ 
+<test name="JavaScriptAlerts" parallel="tests">
+<!-- 
+	<test name="JavaScriptAlerts">	 
+-->	
+	
+<parameter name="browser" value="chrome"/> 
+		
 <!-- 
 <groups>
  	<run> 
@@ -14,16 +22,11 @@
 </listeners>
 -->	
 
-	<test name="JavaScriptAlerts"> 
-		<parameter name="browser" value="chrome"/>
-		<classes> 
+
+<classes> 
 <!--	
-	
-
-
 			
--->	
-	
+-->		
 	<class name="tests.SimpleFormTest"></class>  		 	
 	<class name="tests.WindowPopupTest"></class> 	
 	<class name="tests.JavaScriptAlertTest"></class>   	
@@ -35,10 +38,12 @@
 	<class name="tests.DragAndDropTest"></class>
 	
 			
-<!-- 				<methods>
-				<include name="samplePrintout"/>
-				<exclude name="testingC"/>
-				</methods>		-->		
+<!--
+ 	<methods>
+		<include name="samplePrintout"/>
+		<exclude name="testingC"/>
+	</methods>
+-->
 			
 		</classes> 
 	</test> 

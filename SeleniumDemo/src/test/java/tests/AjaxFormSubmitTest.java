@@ -37,7 +37,6 @@ public class AjaxFormSubmitTest extends DriverInitializer{
 		ajaxFormSubmit.submitButtonClick();
 		String actual_message=ajaxFormSubmit.successMessageDisplay();
 		Assert.assertEquals(actual_message, expected_Message);
-		System.out.println("Expected & Actual message is same!!!");
 		
 		screenshotUtil= new ScreenshotUtil(driver, "verifyAjaxFormStringSubmit");
 

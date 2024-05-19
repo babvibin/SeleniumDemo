@@ -36,8 +36,7 @@ public class WindowPopup {
 	WebElement closeButton;
 
 	@FindBy(xpath = "//h1[contains(text(),'Obsqura Zone')]")
-	WebElement obsquraZoneText;
-	
+	WebElement obsquraZoneText;	
 	
 	public void clicklikeUsOnFacebook()
 	{
@@ -72,5 +71,4 @@ public class WindowPopup {
 		System.out.println(PageText);
 		return PageText;
 	}
-
 }

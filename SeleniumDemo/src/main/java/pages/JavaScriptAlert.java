@@ -23,8 +23,7 @@ public class JavaScriptAlert {
 	WebElement clickMeButtonJavaScriptConfirmBox;
 	
 	@FindBy(xpath = "//button[@class='btn btn-danger']")
-	WebElement clickMeButtonJavaScriptPromptBox;
-	
+	WebElement clickMeButtonJavaScriptPromptBox;	
 	
 	public void clickClickMeButtonJavaScriptAlertBox()
 	{
@@ -71,7 +70,6 @@ public class JavaScriptAlert {
 		Alert alert1= driver.switchTo().alert(); 
 		alert1.sendKeys(""); 
 		alert1.sendKeys("Hello"); 
-		alert1.accept(); 
-		
+		alert1.accept(); 		
 	}
 }

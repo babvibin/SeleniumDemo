@@ -24,7 +24,6 @@ public class TableWithPagination {
 //	@FindBy(xpath = "//*[@id='dtBasicExample']/tbody/tr")
 //	List<WebElement> droppedElements;	
 	
-	
 	public int getRowNumber(String name)
 	{		
 		int size = driver.findElements(By.xpath("//*[@id='dtBasicExample']/tbody/tr")).size();

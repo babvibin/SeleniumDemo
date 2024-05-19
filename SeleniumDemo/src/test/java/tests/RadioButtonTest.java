@@ -19,12 +19,7 @@ public class RadioButtonTest extends DriverInitializer {
 	InputForm inputForm;
 	RadioButton radioButton;
 	ScreenshotUtil screenshotUtil;
-	ReportUtil reportUtil;
-	
-	String expectedMaleGenderMessage="Gender : Male\r\n"
-			+ "Age group:";
-	String expectedFemaleGenderMessage="";
-	
+	ReportUtil reportUtil;	
 	
 	@Test(priority = 1)
 	public void verifyMaleGenderRadioButton() throws IOException

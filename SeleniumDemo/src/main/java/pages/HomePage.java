@@ -76,5 +76,4 @@ public class HomePage {
 	{
 		othersMenu.click();
 	}	
-	
 }

@@ -16,9 +16,7 @@ public class ScreenshotUtil {
 		this.driver=driver;		
 		TakesScreenshot takesScreenshot = (TakesScreenshot)driver ; 
 		File file = takesScreenshot.getScreenshotAs(OutputType.FILE); 
-	//	FileUtils.copyFile(file,new File(fileLocation+"/"+screenshotName+".png"));
 		Long time = System.currentTimeMillis();
-		FileUtils.copyFile(file,new File(fileLocation+"/"+screenshotName+time+".png"));		
-		System.out.println("Screeshot captured Successfully");
+		FileUtils.copyFile(file,new File(fileLocation+"/"+screenshotName+time+".png"));			
 	}
 }

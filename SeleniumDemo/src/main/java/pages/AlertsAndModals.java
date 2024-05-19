@@ -59,6 +59,5 @@ public class AlertsAndModals {
 	public void clickFileDownload()
 	{
 		fileDownload.click();
-	}
-	
+	}	
 }

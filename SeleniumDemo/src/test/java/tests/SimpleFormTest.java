@@ -21,7 +21,6 @@ public class SimpleFormTest extends DriverInitializer {
 	InputForm inputForm;
 	SimpleFormDemo simpleFormDemo;
 	ReportUtil ReportUtil;
-
 	
 	@Test(priority = 1)
 	public void verifySimpleFormDemo_SingleInputField()

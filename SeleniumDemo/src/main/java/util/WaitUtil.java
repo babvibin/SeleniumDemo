@@ -27,14 +27,12 @@ public class WaitUtil {
 	{
 		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(pageElement));			
-	  //wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("validationCustom01")));		
 	}
 	
 	public void explicitWaitTextToBePresentInElementValue(WebElement element, String message)
 	{
 		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.textToBePresentInElementValue(element, message));		
-	//	wait.until(ExpectedConditions.invisibilityOfElementWithText((By) element, message));
+		wait.until(ExpectedConditions.textToBePresentInElementValue(element, message));	
 	}
 	
 	public void fluentWaitTextToBePresentInElement(WebElement element, String message)

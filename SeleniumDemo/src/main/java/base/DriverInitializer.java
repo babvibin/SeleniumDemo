@@ -28,9 +28,7 @@ public class DriverInitializer {
 	@BeforeClass
 	@Parameters({"browser"})	
 	public void browserSelection(@Optional ("chrome") String browserName)
-	{
-	System.out.println(browserName);	
-	
+	{	
 	switch(browserName)
 	{
 	case "chrome":

@@ -15,5 +15,4 @@ public class PropertyReaderUtil {
         properties.load(fileReader);
         return properties.getProperty(key);
 	}
-
 }

@@ -94,5 +94,4 @@ public class FormSubmit {
 		String validationMessage=checkboxValidationMessage.getText();
 		return validationMessage;
 	}
-
 }

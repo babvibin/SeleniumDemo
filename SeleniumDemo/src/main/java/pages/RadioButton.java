@@ -23,8 +23,7 @@ public class RadioButton {
 	WebElement getResultsButton;
 	
 	@FindBy(id = "message-two")
-	WebElement messageText;
-	
+	WebElement messageText;	
 	
 	public void clickPatientGenderMale()
 	{

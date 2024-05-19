@@ -13,8 +13,7 @@ public class ExcelUtil {
 	XSSFWorkbook w;
 	XSSFSheet sh;	
 	String fileLocation=System.getProperty("user.dir") + "/src/test/resources";
-	String fileName, sheetName;
-	
+	String fileName, sheetName;	
 	
 	public String getStringData(int x,int y) throws IOException
 	{	
@@ -40,6 +39,5 @@ public class ExcelUtil {
 		XSSFCell c=r.getCell(y);
 		int z=(int) c.getNumericCellValue();
 		return String.valueOf(z);	
-	}	
-
+	}
 }

@@ -68,6 +68,5 @@ public class SimpleFormDemo {
 	{
 		String totalTextValue = totalText.getText();
 		return totalTextValue;
-	}
-	
+	}	
 }

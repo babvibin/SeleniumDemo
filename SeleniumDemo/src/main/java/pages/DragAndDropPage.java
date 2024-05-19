@@ -30,8 +30,7 @@ public class DragAndDropPage {
 	WebElement sorceElement4;
 	
 	@FindBy(id = "mydropzone")
-	WebElement targetElement;
-	
+	WebElement targetElement;	
 	
 	public void dragsAndDropSorceElement1()
 	{
@@ -53,10 +52,3 @@ public class DragAndDropPage {
 		actions.dragAndDrop(sorceElement4, targetElement).perform();
 	}	
 }
-
-
-
-
-
-
-

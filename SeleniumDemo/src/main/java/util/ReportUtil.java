@@ -55,18 +55,3 @@ public class ReportUtil {
 		extentReports.flush();
 	}
 }
-
-/*	
- //Below is a sample method that uses the above Extend Report
-	public void myTestReport(String testReportName){
-		ExtentReports extentReports = generateReports();
-	    ExtentTest extenTest =extentReports.createTest(testReportName);
-	    extenTest.log(Status.INFO,"entering test");
-	    System.out.println(testReportName);
-	    extenTest.log(Status.PASS,"test passed");
-	    extenTest.log(Status.ERROR, "test Error");
-	    extenTest.log(Status.FAIL, "test Fail");
-	    extenTest.log(Status.WARNING, "test Warning");
-	    extentReports.flush();
-	}	
-*/	
