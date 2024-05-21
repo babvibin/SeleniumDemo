@@ -9,7 +9,7 @@ import javax.sound.midi.SysexMessage;
 public class PropertyReaderUtil {
 	public static String getProperty(String key) throws IOException
 	{
-		String filePath= System.getProperty("user.dir")+"\\src\\test\\resources\\variables.properties";
+		String filePath= System.getProperty("user.dir")+"\\src\\main\\resources\\variables.properties";
 		FileReader fileReader = new FileReader(filePath);
         Properties properties = new Properties();
         properties.load(fileReader);

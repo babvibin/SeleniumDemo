@@ -12,7 +12,7 @@ public class ExcelUtil {
 	FileInputStream f;
 	XSSFWorkbook w;
 	XSSFSheet sh;	
-	String fileLocation=System.getProperty("user.dir") + "/src/test/resources";
+	String fileLocation=System.getProperty("user.dir") + "/src/main/resources";
 	String fileName, sheetName;	
 	
 	public String getStringData(int x,int y) throws IOException
