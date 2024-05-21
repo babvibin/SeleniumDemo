@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"> 
-<suite name="MySeleniumDemo" > 
+<suite name="MySeleniumDemoSUITE" > 
 
 <listeners>
 		<listener class-name="util.ReportUtil"></listener>
@@ -9,7 +9,7 @@
 
 -->	
 
-<test name="SeleniumDemo">
+<test name="SeleniumDemoTESTNAME">
 <!-- 		 
 <test name="JavaScriptAlerts" parallel="tests">
 -->	
