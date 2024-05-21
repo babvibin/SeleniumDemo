@@ -22,7 +22,7 @@ public class JavaScriptAlertTest extends DriverInitializer {
 	AlertsAndModals alertsAndModals;
 	JavaScriptAlert javaScriptAlert;
 	ScreenshotUtil screenshotUtil;
-	ReportUtil reportUtil;	
+//	ReportUtil reportUtil;	
 	
 	static String expectedValue_JavaScriptAlertBox="I am a Javascript alert box!";
 	static String expectedValue_JavaScriptPromptBox="Please enter your name";
@@ -42,13 +42,14 @@ public class JavaScriptAlertTest extends DriverInitializer {
 		javaScriptAlert.closeJavaScriptAlertBox();
 		
 		screenshotUtil= new ScreenshotUtil(driver, "verifyJavaScriptAlertBox");
-
+/*
 		reportUtil=new ReportUtil();
 		reportUtil.generateReports();
 		reportUtil.generateReports1();
 		reportUtil.createTest1("Testing: verifyJavaScriptAlertBox");
 		reportUtil.extenTestLogINFO();
 		reportUtil.extenTestlogPASS();
+*/		
 	}
 	
 	@Test(priority = 2)
@@ -59,12 +60,13 @@ public class JavaScriptAlertTest extends DriverInitializer {
 		javaScriptAlert.dismissJavaScriptPromptBox();	
 		
 		screenshotUtil= new ScreenshotUtil(driver, "verifyJavaScriptPromptBox_dismiss");
-
+/*
 		reportUtil.generateReports1();
 		reportUtil.createTest1("Testing: verifyJavaScriptPromptBox_dismiss");
 		reportUtil.extenTestLogINFO();
 		reportUtil.extenTestlogPASS();
 		reportUtil.extenReportFLUSH();
+*/		
 	}
 	
 	@Test(priority = 3)
@@ -74,11 +76,12 @@ public class JavaScriptAlertTest extends DriverInitializer {
 		javaScriptAlert.acceptJavaScriptPromptBox();	
 		
 		screenshotUtil= new ScreenshotUtil(driver, "verifyJavaScriptPromptBox_accept");
-
+/*
 		reportUtil.generateReports1();
 		reportUtil.createTest1("Testing: verifyJavaScriptPromptBox_accept");
 		reportUtil.extenTestLogINFO();
 		reportUtil.extenTestlogPASS();
 		reportUtil.extenReportFLUSH();
+*/
 	}
 }

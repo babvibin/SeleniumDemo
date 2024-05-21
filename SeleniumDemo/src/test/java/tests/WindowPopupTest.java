@@ -24,10 +24,10 @@ public class WindowPopupTest extends DriverInitializer {
 	WindowPopup windowPopup;
 	SwitchToNewWindow switchToNewWindow;
 	ScreenshotUtil screenshotUtil;
-	ReportUtil reportUtil;
+//	ReportUtil reportUtil;
 	String exp_Text="Obsqura Zone ";
 	
-	@Test(priority = 1)
+	@Test(priority = 1, retryAnalyzer = util.RetryAnalyzer.class)
 	public void verifyClicklikeUsOnFacebook() throws IOException
 	{
 		driver=getDriver();
@@ -46,7 +46,7 @@ public class WindowPopupTest extends DriverInitializer {
 		Assert.assertEquals(act_Text, exp_Text);
 		
 		screenshotUtil= new ScreenshotUtil(driver, "ClicklikeUsOnFacebook");
-		
+/*		
 		reportUtil=new ReportUtil();
 		reportUtil.generateReports();
 		reportUtil.generateReports1();
@@ -56,7 +56,7 @@ public class WindowPopupTest extends DriverInitializer {
 	//	reportUtil.extenTestlogFAIL();
 	//	reportUtil.extenTestlogWARNING();
 		reportUtil.extenReportFLUSH();
-		
+*/		
 		
 	}
 }

@@ -19,7 +19,7 @@ public class JQueryUiProgressTest extends DriverInitializer {
 	JQueryUiProgress jQueryUiProgress;
 	
 	ScreenshotUtil screenshotUtil;
-	ReportUtil reportUtil;
+//	ReportUtil reportUtil;
 	
 	@Test(priority = 1, retryAnalyzer = util.RetryAnalyzer.class)
 	public void verifyJQueryUiProgressCloseButton() throws IOException
@@ -34,7 +34,7 @@ public class JQueryUiProgressTest extends DriverInitializer {
 		jQueryUiProgress.clickCloseButton();	
 		
 		screenshotUtil= new ScreenshotUtil(driver, "verifyJQueryUiProgressCloseButton");
-
+/*
 		reportUtil=new ReportUtil();
 		reportUtil.generateReports();
 		reportUtil.generateReports1();
@@ -42,5 +42,6 @@ public class JQueryUiProgressTest extends DriverInitializer {
 		reportUtil.extenTestLogINFO();
 		reportUtil.extenTestlogPASS();
 		reportUtil.extenReportFLUSH();
+*/		
 	}
 }
