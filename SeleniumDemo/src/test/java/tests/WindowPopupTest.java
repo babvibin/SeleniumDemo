@@ -24,7 +24,6 @@ public class WindowPopupTest extends DriverInitializer {
 	WindowPopup windowPopup;
 	SwitchToNewWindow switchToNewWindow;
 	ScreenshotUtil screenshotUtil;
-//	ReportUtil reportUtil;
 	String exp_Text="Obsqura Zone ";
 	
 	@Test(priority = 1, retryAnalyzer = util.RetryAnalyzer.class)
@@ -40,23 +39,10 @@ public class WindowPopupTest extends DriverInitializer {
 		switchToNewWindow=new SwitchToNewWindow(driver);		
 		windowPopup.enterEmail("john.doe@abcmail.com");
 		windowPopup.enterPassword("Password@123");
-	//	windowPopup.clickLoginButton();
 		windowPopup.clickCloseButton();
 		String act_Text=windowPopup.getText();
 		Assert.assertEquals(act_Text, exp_Text);
 		
-		screenshotUtil= new ScreenshotUtil(driver, "ClicklikeUsOnFacebook");
-/*		
-		reportUtil=new ReportUtil();
-		reportUtil.generateReports();
-		reportUtil.generateReports1();
-		reportUtil.createTest1("Testing: verifyClicklikeUsOnFacebook");
-		reportUtil.extenTestLogINFO();
-		reportUtil.extenTestlogPASS();
-	//	reportUtil.extenTestlogFAIL();
-	//	reportUtil.extenTestlogWARNING();
-		reportUtil.extenReportFLUSH();
-*/		
-		
+		screenshotUtil= new ScreenshotUtil(driver, "ClicklikeUsOnFacebook");		
 	}
 }

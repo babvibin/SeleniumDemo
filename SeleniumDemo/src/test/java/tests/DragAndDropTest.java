@@ -15,8 +15,8 @@ public class DragAndDropTest extends DriverInitializer {
 	private WebDriver driver;
 	private HomePage homePage;
 	private Others others;
-//	DragAndDropPage dragAndDropPage;
-	private DragNDropPage dragNDropPage;
+	DragAndDropPage dragAndDropPage;
+	
 	
 	@Test
 	public void verifyDragAndDrop() throws InterruptedException
@@ -26,16 +26,17 @@ public class DragAndDropTest extends DriverInitializer {
 		homePage.clickOthersMenu();
 		others=new Others(driver);
 		others.clickDragAndDrop();
-	//	dragAndDropPage=new DragAndDropPage(driver);
-	//	dragAndDropPage.dragsAndDropSorceElement1();
-	//	dragAndDropPage.dragsAndDropSorceElement2();
-	//	dragAndDropPage.dragsAndDropSorceElement3();
-	//	dragAndDropPage.dragsAndDropSorceElement4();			
+		dragAndDropPage=new DragAndDropPage(driver);
+		dragAndDropPage.dragsAndDropSorceElement1();
+		dragAndDropPage.dragsAndDropSorceElement2();
+		dragAndDropPage.dragsAndDropSorceElement3();
+		dragAndDropPage.dragsAndDropSorceElement4();			
 		
 		Thread.sleep(2000);
-		dragNDropPage= new DragNDropPage(driver);
-		dragNDropPage.dragNDropElement();
-		boolean success= dragNDropPage.isDropComplete("testing");
-		System.out.println(success);
+		dragAndDropPage= new DragAndDropPage(driver);
+		dragAndDropPage.dragsAndDropSorceElement1();
+		dragAndDropPage.dragsAndDropSorceElement2();
+		dragAndDropPage.dragsAndDropSorceElement3();
+		dragAndDropPage.dragsAndDropSorceElement4();
 	}
 }

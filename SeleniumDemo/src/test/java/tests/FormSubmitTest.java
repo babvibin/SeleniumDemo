@@ -21,7 +21,6 @@ public class FormSubmitTest extends DriverInitializer{
 	String expectedMessage= "Form has been submitted successfully!";
 	String expectedCheckBoxValidationMessage="You must agree before submitting.";
 	ScreenshotUtil screenshotUtil;
-//	ReportUtil reportUtil;	
 	
 	@Test(priority = 1)
 	public void verifyFormSubmitSuccessfully() throws IOException
@@ -43,14 +42,7 @@ public class FormSubmitTest extends DriverInitializer{
 		String actualMessage= formSubmit.displaySubmittedSuccessfullyMessage();
 		Assert.assertEquals(actualMessage, expectedMessage);
 		
-		screenshotUtil= new ScreenshotUtil(driver, "verifyFormSubmitSuccessfully");
-/*
-		reportUtil=new ReportUtil();
-		reportUtil.generateReports();
-		reportUtil.generateReports1();
-		reportUtil.createTest1("Testing: verifyFormSubmitSuccessfully");
-		reportUtil.extenTestLogINFO();
-*/		
+		screenshotUtil= new ScreenshotUtil(driver, "verifyFormSubmitSuccessfully");	
 	}
 	
 	@Test(priority = 2, retryAnalyzer = util.RetryAnalyzer.class )
@@ -69,12 +61,5 @@ public class FormSubmitTest extends DriverInitializer{
 		Assert.assertEquals(actualCheckBoxValidationMessage, expectedCheckBoxValidationMessage);
 		
 		screenshotUtil= new ScreenshotUtil(driver, "verifyFormSubmit_CheckBoxValidationMessageDisplay");
-		
-/*		
-		reportUtil.createTest1("Testing: verifyFormSubmitSuccessfully");
-		reportUtil.extenTestLogINFO();
-		reportUtil.extenTestlogPASS();
-		reportUtil.extenReportFLUSH();
-*/
 	}
 }

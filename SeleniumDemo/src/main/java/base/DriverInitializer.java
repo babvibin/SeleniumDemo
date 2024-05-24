@@ -32,8 +32,6 @@ public class DriverInitializer {
 	switch(browserName)
 	{
 	case "chrome":
-	//	WebDriverManager.chromedriver().setup();		
-	//	System.setProperty("webdriver.chrome.driver", "C:\\Selenium_Drivers\\chromedriver.exe");
 		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/src/main/resources/chromedriver.exe");
 		driver=new ChromeDriver();
 		break;	

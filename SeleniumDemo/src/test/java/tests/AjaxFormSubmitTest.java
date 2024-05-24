@@ -19,7 +19,6 @@ public class AjaxFormSubmitTest extends DriverInitializer{
 	InputForm inputForm;
 	AjaxFormSubmit ajaxFormSubmit;
 	ScreenshotUtil screenshotUtil;
-//	ReportUtil reportUtil;
 	
 	String expected_Message="Form has been submitted successfully!";
 	
@@ -39,14 +38,5 @@ public class AjaxFormSubmitTest extends DriverInitializer{
 		Assert.assertEquals(actual_message, expected_Message);
 		
 		screenshotUtil= new ScreenshotUtil(driver, "verifyAjaxFormStringSubmit");
-/*
-		reportUtil=new ReportUtil();
-		reportUtil.generateReports();
-		reportUtil.generateReports1();
-		reportUtil.createTest1("Testing: verifyAjaxFormStringSubmit");
-		reportUtil.extenTestLogINFO();
-		reportUtil.extenTestlogPASS();
-		reportUtil.extenReportFLUSH();		
-*/
 	}
 }

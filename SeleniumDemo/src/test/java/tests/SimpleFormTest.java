@@ -20,7 +20,6 @@ public class SimpleFormTest extends DriverInitializer {
 	HomePage homePage;
 	InputForm inputForm;
 	SimpleFormDemo simpleFormDemo;
-//	ReportUtil ReportUtil;
 	
 	@Test(priority = 1)
 	public void verifySimpleFormDemo_SingleInputField()
@@ -35,19 +34,7 @@ public class SimpleFormTest extends DriverInitializer {
 		simpleFormDemo.showMessageButtonClick();
 		String actualMessageText=simpleFormDemo.yourMessageTextVerify();
 //Hard Assert: Executions stops when a Hard Assert Fails.//		
-		Assert.assertEquals(actualMessageText, "Your Message : My First Message");
-	//This is an example for Extent Report PART-1//		
-/*
-		ReportUtil=new ReportUtil();
-		ReportUtil.generateReports();
-		ReportUtil.generateReports1();
-		ReportUtil.createTest1("Testing: verify verifySimpleFormDemo_SingleInputField");
-		ReportUtil.extenTestLogINFO();
-	//	ReportUtil.extenTestlogPASS();
-	//	ReportUtil.extenTestlogFAIL();
-	//	ReportUtil.extenTestlogWARNING();
-	//	ReportUtil.extenReportFLUSH();
-*/		
+		Assert.assertEquals(actualMessageText, "Your Message : My First Message");	
 	}		
 
 	@Test(priority = 2)
@@ -61,15 +48,6 @@ public class SimpleFormTest extends DriverInitializer {
 		SoftAssert softAssert = new SoftAssert(); 
 		softAssert.assertTrue(value);		
 		
-	//This is an example for Extent Report PART-2//	
-/*		
-		ReportUtil.createTest1("Testing: verifySimpleFormDemo_TwoInputFields");
-	//	ReportUtil.extenTestLogINFO();
-	//	ReportUtil.extenTestlogPASS();
-	//	ReportUtil.extenTestlogFAIL();
-		ReportUtil.extenTestlogWARNING();
-		ReportUtil.extenReportFLUSH();			
-*/		
 //This is an example for taking Screenshot of a Web Page//
 		ScreenshotUtil ScreenshotUtil= new ScreenshotUtil(driver, "verifySimpleFormDemo");	
 		

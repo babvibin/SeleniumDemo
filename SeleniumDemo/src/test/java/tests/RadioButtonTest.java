@@ -19,7 +19,6 @@ public class RadioButtonTest extends DriverInitializer {
 	InputForm inputForm;
 	RadioButton radioButton;
 	ScreenshotUtil screenshotUtil;
-//	ReportUtil reportUtil;	
 	
 	@Test(priority = 1)
 	public void verifyMaleGenderRadioButton() throws IOException
@@ -37,15 +36,7 @@ public class RadioButtonTest extends DriverInitializer {
 		boolean actual_Male= actualMaleGenderMessage.contains("Gender : Male");
 		Assert.assertEquals(actual_Male, true);
 		
-		screenshotUtil= new ScreenshotUtil(driver, "verifyMaleGenderRadioButton");
-/*
-		reportUtil=new ReportUtil();
-		reportUtil.generateReports();
-		reportUtil.generateReports1();
-		reportUtil.createTest1("Testing: verifyMaleGenderRadioButton");
-		reportUtil.extenTestLogINFO();
-		reportUtil.extenTestlogPASS();
-*/		
+		screenshotUtil= new ScreenshotUtil(driver, "verifyMaleGenderRadioButton");	
 	}
 	
 	@Test(priority = 2)
@@ -59,13 +50,6 @@ public class RadioButtonTest extends DriverInitializer {
 		boolean actual_Female= actualFemaleGenderMessage.contains("Gender : Female");
 		Assert.assertEquals(actual_Female, true);	
 		
-		screenshotUtil= new ScreenshotUtil(driver, "verifyFemaleGenderRadioButton");
-/*		
-		reportUtil.generateReports1();
-		reportUtil.createTest1("Testing: verifyFemaleGenderRadioButton");
-		reportUtil.extenTestLogINFO();
-		reportUtil.extenTestlogPASS();
-		reportUtil.extenReportFLUSH();
-*/		
+		screenshotUtil= new ScreenshotUtil(driver, "verifyFemaleGenderRadioButton");	
 	}
 }

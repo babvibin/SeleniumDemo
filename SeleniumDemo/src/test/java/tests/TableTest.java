@@ -26,7 +26,6 @@ public class TableTest extends DriverInitializer{
 	int rowNumber;
 	
 	ScreenshotUtil screenshotUtil;
-//	ReportUtil reportUtil;	
 	
 	@Test(priority = 1)
 	public void getValuesFromExcel() throws IOException
@@ -89,14 +88,5 @@ public class TableTest extends DriverInitializer{
 		System.out.println(currentSalary+ " :CurrentSalary is correct");
 		
 		screenshotUtil= new ScreenshotUtil(driver, "Table-Excel Test");
-/*
-		reportUtil=new ReportUtil();
-		reportUtil.generateReports();
-		reportUtil.generateReports1();
-		reportUtil.createTest1("Testing: Table-Excel Test");
-		reportUtil.extenTestLogINFO();
-		reportUtil.extenTestlogPASS();
-		reportUtil.extenReportFLUSH();
-*/		
 	}
 }
