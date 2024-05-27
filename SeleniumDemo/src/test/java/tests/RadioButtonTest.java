@@ -31,8 +31,7 @@ public class RadioButtonTest extends DriverInitializer {
 		radioButton=new RadioButton(driver);
 		radioButton.clickPatientGenderMale();
 		radioButton.clickGetResultsButton();
-		String actualMaleGenderMessage= radioButton.getMessageText();
-		System.out.println(actualMaleGenderMessage);
+		String actualMaleGenderMessage= radioButton.getMessageText();		
 		boolean actual_Male= actualMaleGenderMessage.contains("Gender : Male");
 		Assert.assertEquals(actual_Male, true);
 		
@@ -45,8 +44,7 @@ public class RadioButtonTest extends DriverInitializer {
 		inputForm.clickRadioButtonsDemo();
 		radioButton.clickPatientGenderFemale();
 		radioButton.clickGetResultsButton();
-		String actualFemaleGenderMessage= radioButton.getMessageText();
-		System.out.println(actualFemaleGenderMessage);
+		String actualFemaleGenderMessage= radioButton.getMessageText();		
 		boolean actual_Female= actualFemaleGenderMessage.contains("Gender : Female");
 		Assert.assertEquals(actual_Female, true);	
 		

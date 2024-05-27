@@ -76,16 +76,14 @@ public class TableTest extends DriverInitializer{
 	public void verifyStartDay()
 	{
 		String currentStartDay=tableWithPagination.getCurrentStartDay(startDay, rowNumber);
-		Assert.assertEquals(currentStartDay, startDay);
-		System.out.println(currentStartDay+ " :CurrentStartDay is correct");			
+		Assert.assertEquals(currentStartDay, startDay);				
 	}
 	
 	@Test(priority = 7)
 	public void verifySalary() throws IOException
 	{
 		String currentSalary=tableWithPagination.getCurrentSalary(salary, rowNumber);
-		Assert.assertEquals(currentSalary, salary);
-		System.out.println(currentSalary+ " :CurrentSalary is correct");
+		Assert.assertEquals(currentSalary, salary);		
 		
 		screenshotUtil= new ScreenshotUtil(driver, "Table-Excel Test");
 	}
