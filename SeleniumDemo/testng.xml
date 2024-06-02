@@ -14,7 +14,7 @@
 <test name="JavaScriptAlerts" parallel="tests">
 -->	
 	
-<parameter name="browser" value="chrome"/> 		
+<parameter name="browser" value="edge"/> 		
 
 <!-- 
 <groups>
@@ -34,7 +34,7 @@
 	<class name="tests.FormSubmitTest"></class>			
 	<class name="tests.RadioButtonTest"></class>		
 	<class name="tests.JQueryUiProgressTest"></class>
-	<class name="tests.DragAndDropTest"></class>	
+	<class name="tests.BootStrapAlertTest"></class>	
 -->		
 	<class name="tests.SimpleFormTest"></class>  		 	
 	<class name="tests.WindowPopupTest"></class> 	
@@ -44,6 +44,7 @@
 	<class name="tests.FormSubmitTest"></class>			
 	<class name="tests.RadioButtonTest"></class>		
 	<class name="tests.JQueryUiProgressTest"></class>
+	<class name="tests.BootStrapAlertTest"></class>	
 
 			
 <!--

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.AjaxFormSubmitTest">
+      <class name="tests.BootStrapAlertTest">
         <methods>
           <include name="browserSelection"/>
-          <include name="verifyAjaxFormStringSubmit"/>
+          <include name="verifyNormalSuccessMessageDisplay"/>
           <include name="browserclose"/>
         </methods>
-      </class> <!-- tests.AjaxFormSubmitTest -->
+      </class> <!-- tests.BootStrapAlertTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
