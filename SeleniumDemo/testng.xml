@@ -9,9 +9,10 @@
 
 -->	
 
-<test name="SeleniumDemoTESTNAME">
-<!-- 		 
-<test name="JavaScriptAlerts" parallel="tests">
+<test name="SeleniumDemoTESTNAME" parallel="tests">
+<!-- 
+<test name="SeleniumDemoTESTNAME">		 
+
 -->	
 	
 <parameter name="browser" value="chrome"/> 		
