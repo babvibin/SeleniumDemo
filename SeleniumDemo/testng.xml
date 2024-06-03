@@ -14,7 +14,7 @@
 <test name="JavaScriptAlerts" parallel="tests">
 -->	
 	
-<parameter name="browser" value="firefox"/> 		
+<parameter name="browser" value="edge"/> 		
 
 <!-- 
 <groups>
