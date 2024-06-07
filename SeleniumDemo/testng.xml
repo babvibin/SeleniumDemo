@@ -9,9 +9,10 @@
 
 -->	
 
-<test name="SeleniumDemoTESTNAME" parallel="tests">
+<test name="SeleniumDemoTESTNAME">	
 <!-- 
-<test name="SeleniumDemoTESTNAME">		 
+<test name="SeleniumDemoTESTNAME" parallel="tests">
+	 
 
 -->	
 	
